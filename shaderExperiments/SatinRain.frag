@@ -1,5 +1,5 @@
 void main () {
-    vec2 st = uv(); vec2 stN = uvN();
+    vec2 st = uv(); vec2 stn = uvn();
     float bx = bands.x;
 
     vec3 c = black;;
@@ -22,10 +22,10 @@ void main () {
 
     vec2 offset = vec2(log(time), cos(time)) ;
     offset = vec2(.5);
-    vec3 bb = texture2D(backbuffer, (stN - offset)  + offset).rgb;
+    vec3 bb = texture2d(backbuffer, (stn - offset)  + offset).rgb;
 
     c = mix(c, bb, .7);
 
 
-    gl_FragColor = vec4(c, 1.0);
+    gl_fragcolor = vec4(c, 1.0);
 }

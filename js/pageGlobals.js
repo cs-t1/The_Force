@@ -1279,7 +1279,8 @@ $(document)
     .keydown( function( event )
     {
         updateKeyboardDown(event.keyCode);
-        if (event.ctrlKey === true && event.shiftKey === true)
+        // TODO: rebind this to a better keymap
+        if (event.ctrlKey === true && event.shiftKey === true && false === true)
         {
              $("#footer").fadeToggle('slow', function(){});
              $("#editor").fadeToggle('slow', function(){});
